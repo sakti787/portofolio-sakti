@@ -1,36 +1,207 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio Website - Sakti Indra Heradewa
 
-## Getting Started
+Website portfolio pribadi yang menampilkan pengalaman, proyek, dan kemampuan dalam pengembangan web full-stack.
 
-First, run the development server:
+## 🚀 Fitur
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Modern Design**: Interface yang clean dan professional dengan color scheme sesuai branding
+- **Responsive Layout**: Tampilan optimal di semua perangkat (desktop, tablet, mobile)
+- **Single Page Application**: Navigasi smooth scroll antar section
+- **SEO Optimized**: Meta tags lengkap untuk search engine optimization
+- **Performance Focused**: Built dengan Next.js SSG untuk loading yang cepat
+- **Accessibility**: Menggunakan semantic HTML dan ARIA labels
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 15 dengan TypeScript
+- **Styling**: Tailwind CSS
+- **Font**: Inter dari Google Fonts
+- **Icons**: Heroicons dan custom SVG
+- **Deployment**: Vercel (recommended)
+
+## 📁 Struktur Project
+
+```
+src/
+├── app/
+│   ├── layout.tsx       # Root layout dengan metadata
+│   ├── page.tsx         # Homepage utama
+│   └── globals.css      # Global styles
+├── components/
+│   ├── Navigation.tsx   # Header navigation
+│   ├── HeroSection.tsx  # Hero/landing section
+│   ├── ExperienceSection.tsx # Timeline pengalaman
+│   ├── ProjectsSection.tsx   # Gallery proyek
+│   ├── AboutSection.tsx      # About me section
+│   └── Footer.tsx       # Footer dengan contact info
+└── config/
+    └── index.ts         # Konfigurasi konten website
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎨 Sections
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 1. Hero Section
+- Nama dan spesialisasi
+- Ringkasan singkat
+- Call-to-action buttons
+- Social media links
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 2. Experience Section
+- Timeline format dengan pengalaman proyek
+- Achievements dalam setiap posisi
+- Technologies & tools yang dikuasai
 
-## Learn More
+### 3. Projects Section
+- **Flexible Project Cards**: Support projects dengan atau tanpa foto
+- **Smart Emoji System**: Auto-generated icons berdasarkan project type
+- **Featured vs Regular**: Categorized project display  
+- **Live Demo & Source Links**: Direct access ke project demos dan repositories
+- **Technology Stack Tags**: Visual representation dari tech used
+- **Responsive Grid Layout**: Optimal di semua device sizes
 
-To learn more about Next.js, take a look at the following resources:
+### 4. About Section
+- Deskripsi personal dan passion
+- Key highlights
+- Personal interests
+- Contact CTA
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 5. Footer/Contact
+- Contact information
+- Social media links
+- Quick navigation
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🚀 Development
 
-## Deploy on Vercel
+### Prerequisites
+- Node.js 18+ 
+- npm atau yarn
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Installation
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Clone repository
+```bash
+git clone [repository-url]
+cd portofolio-sakti
+```
+
+2. Install dependencies
+```bash
+npm install
+```
+
+3. Run development server
+```bash
+npm run dev
+```
+
+4. Open [http://localhost:3000](http://localhost:3000) in browser
+
+## 📝 Content Management
+
+Semua konten website dikelola melalui file `src/config/index.ts`. Update informasi berikut:
+
+- **Personal Information**: Nama, email, lokasi, spesialisasi
+- **Social Links**: URL ke profil LinkedIn, GitHub, Instagram
+- **Experience**: Timeline pengalaman dengan achievements
+- **Projects**: Detail proyek dengan teknologi dan links
+- **About**: Deskripsi personal dan foto
+
+## 🎯 SEO & Performance
+
+- **Lighthouse Score Target**: 90+ untuk Performance, Accessibility, SEO
+- **Meta Tags**: Open Graph, Twitter Cards, keywords
+- **Semantic HTML**: Proper heading hierarchy dan ARIA labels
+- **Image Optimization**: Next.js Image component untuk gambar
+- **Font Optimization**: Google Fonts dengan display swap
+
+## 🚀 Deployment
+
+### Vercel (Recommended)
+1. Push code ke GitHub repository
+2. Connect repository ke Vercel
+3. Deploy otomatis dari branch `main`
+
+### Manual Build
+```bash
+npm run build
+npm start
+```
+
+## 🔧 Customization
+
+### Project Cards Configuration
+Website mendukung **2 jenis project displays**:
+
+#### **With Images** 🖼️
+```typescript
+{
+  id: "project-name",
+  title: "Project Title", 
+  description: "Description...",
+  image: "/projects/image.png", // ✅ Include image path
+  technologies: ["Next.js", "TypeScript"],
+  liveUrl: "https://demo.com",
+  sourceUrl: "https://github.com/user/repo",
+  featured: true
+}
+```
+
+#### **Without Images** 🎨  
+```typescript
+{
+  id: "project-name",
+  title: "Chat Application", 
+  description: "Real-time messaging app...",
+  // image: "/path/image.png", // ❌ Omit or comment out
+  technologies: ["Node.js", "Socket.io"],
+  sourceUrl: "https://github.com/user/repo", 
+  featured: false
+}
+```
+
+**Smart Emoji System** automatically assigns relevant emojis:
+- 💰 Finance/Money projects
+- 🎬 Movie/Entertainment 
+- 💬 Chat/Communication
+- 🛒 E-commerce/Shopping
+- 📝 Blog/Content
+- 💻 General tech projects
+
+### Color Scheme
+Update warna primary di `src/app/globals.css`:
+```css
+:root {
+  --primary: #5755ff;
+  --primary-hover: #4c4ae6;
+}
+```
+
+### Typography
+Font dapat diubah di `src/app/layout.tsx`:
+```tsx
+import { Inter } from "next/font/google";
+```
+
+### Content
+Semua konten dapat diubah di `src/config/index.ts` tanpa touching komponen.
+
+## 📱 Responsive Design
+
+- **Mobile First**: Design dimulai dari mobile kemudian scaled up
+- **Breakpoints**: sm (640px), md (768px), lg (1024px), xl (1280px)
+- **Touch Friendly**: Button sizes dan spacing optimal untuk touch devices
+
+## 📄 License
+
+This project is open source dan tersedia under [MIT License](LICENSE).
+
+## 👨‍💻 Author
+
+**Sakti Indra Heradewa**
+- Email: saktiindraheradewa@gmail.com
+- LinkedIn: [Sakti Indra Heradewa](https://linkedin.com/in/sakti-indra-heradewa)
+- GitHub: [sakti-indra-heradewa](https://github.com/sakti-indra-heradewa)
+
+---
+
+Built with ❤️ using Next.js & Tailwind CSS

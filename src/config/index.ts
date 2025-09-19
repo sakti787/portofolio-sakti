@@ -1,0 +1,165 @@
+// Configuration types for portfolio website content
+export interface Experience {
+  id: string;
+  position: string;
+  project: string;
+  duration: string;
+  achievements: string[];
+}
+
+export interface Project {
+  id: string;
+  title: string;
+  description: string;
+  image?: string; // Optional image
+  technologies: string[];
+  liveUrl?: string;
+  sourceUrl?: string;
+  featured: boolean;
+}
+
+export interface SocialLink {
+  platform: string;
+  url: string;
+  icon: string;
+}
+
+export interface SiteConfig {
+  name: string;
+  email: string;
+  location: string;
+  specialization: string;
+  summary: string;
+  about: {
+    description: string;
+    image: string;
+  };
+  socialLinks: SocialLink[];
+}
+
+export interface SiteContent {
+  experiences: Experience[];
+  projects: Project[];
+}
+
+// Site configuration
+export const siteConfig: SiteConfig = {
+  name: "Sakti Indra Heradewa",
+  email: "sakti787@gmail.com",
+  location: "Yogyakarta, Indonesia",
+  specialization: "Full-Stack Web Developer",
+  summary: "Mahasiswa Teknik Informatika semester 5 yang passionate dalam pengembangan web full-stack dengan pengalaman membangun aplikasi menggunakan Next.js, Laravel, dan teknologi modern lainnya.",
+  about: {
+    description: "Saya adalah mahasiswa Teknik Informatika semester 5 yang bersemangat dalam menciptakan solusi digital yang efektif. Keahlian saya terasah melalui berbagai proyek menggunakan Next.js, Laravel, dan Supabase, dan memiliki beberapa sertifikasi di LinkedIn. Saya memiliki minat khusus pada DevOps dan self-hosting, yang memungkinkan saya memahami infrastruktur aplikasi secara mendalam.",
+    image: "/images/profile/profile.jpg"
+  },
+  socialLinks: [
+    {
+      platform: "LinkedIn",
+      url: "https://www.linkedin.com/in/sakti-indra/",
+      icon: "linkedin"
+    },
+    {
+      platform: "GitHub",
+      url: "https://github.com/sakti787",
+      icon: "github"
+    },
+    {
+      platform: "Instagram",
+      url: "https://www.instagram.com/saktii787",
+      icon: "instagram"
+    }
+  ]
+};
+
+// Site content
+export const siteContent: SiteContent = {
+  experiences: [
+    {
+      id: "uangsakti",
+      position: "Full-Stack Developer",
+      project: "UangSakti.my.id - Aplikasi Manajemen Keuangan",
+      duration: "September 2025",
+      achievements: [
+        "Mengembangkan aplikasi web manajemen keuangan personal menggunakan Next.js dan Supabase",
+        "Mengimplementasikan fitur tracking income dan expense",
+        "Mendesain dan membangun RESTful API untuk operasi CRUD data keuangan",
+        "Menerapkan authentication dan authorization menggunakan Supabase Auth",      ]
+    },
+    {
+    id: "infra",
+    position: "Infrastruktur & Deployment",
+    project: "Self-Hosting Aplikasi Web (uangsakti.my.id)",
+    duration: "September 2025",
+    achievements: [
+        "Melakukan setup dan konfigurasi server Ubuntu dari nol di lingkungan non-cloud untuk production deployment.",
+        "Mengkonfigurasi Nginx sebagai reverse proxy untuk mengarahkan traffic ke aplikasi Next.js yang berjalan dengan process manager PM2.",
+        "Mengamankan dan mempublikasikan aplikasi web dari server lokal (non-cloud) menggunakan Cloudflare Tunnel, secara efektif menyembunyikan alamat IP asli server dan melindunginya dari serangan langsung.",
+        "Membuat deployment script sederhana (Bash) untuk otomatisasi proses pull dari Git dan restart service aplikasi.",
+        "Menerapkan monitoring dasar pada server untuk memantau penggunaan CPU dan memori secara real-time."
+    ]
+    },
+    {
+      id: "zonamovie",
+      position: "Full-Stack Developer",
+      project: "Zona Movie - Platform Streaming Film",
+      duration: "Juli 2025",
+      achievements: [
+        "Membangun platform streaming film menggunakan Laravel dan MySQL",
+        "Mengintegrasikan payment gateway untuk sistem subscription premium",
+        "Mengelola database dengan lebih dari 1000+ data film dan metadata",
+        "Menggunakan teknik caching untuk optimasi loading content"
+      ]
+    },
+  ],
+  projects: [
+    {
+      id: "uangsakti",
+      title: "UangSakti.my.id",
+      description: "Aplikasi web manajemen keuangan personal yang memungkinkan pengguna untuk melacak income, expense, dan merencanakan budget dengan interface yang intuitif.",
+      image: "/projects/screenshots/website-uangsakti.png", // Menggunakan gambar yang ada
+      technologies: ["Next.js", "TypeScript", "Supabase", "Tailwind CSS", "Chart.js"],
+      liveUrl: "https://uangsakti.my.id",
+      sourceUrl: "https://github.com/sakti787/uangsakti",
+      featured: true
+    },
+    {
+      id: "zonamovie",
+      title: "Zona Movie",
+      description: "Platform streaming film dengan fitur subscription, playlist, dan history. Dilengkapi dengan payment gateway dan sistem manajemen konten yang komprehensif.",
+      technologies: ["Laravel", "PHP", "MySQL", "Bootstrap", "Payment Gateway"],
+      liveUrl: "https://zonamovie.demo.com",
+      sourceUrl: "https://github.com/sakti-indra-heradewa/zona-movie",
+      featured: true
+    },
+    {
+      id: "portfolio",
+      title: "Portfolio Website",
+      description: "Website portfolio personal yang dibangun dengan Next.js dan Tailwind CSS, menampilkan proyek dan pengalaman dengan desain yang clean dan responsif.",
+      image: "/projects/screenshots/website-portfolio.png",
+      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
+      liveUrl: "https://sakti-portfolio.vercel.app",
+      sourceUrl: "https://github.com/sakti-indra-heradewa/portfolio",
+      featured: false
+    },
+  ]
+};
+
+// Navigation items
+export const navigation = [
+  { name: "Home", href: "#home" },
+  { name: "Experience", href: "#experience" },
+  { name: "Projects", href: "#projects" },
+  { name: "About", href: "#about" },
+  { name: "Contact", href: "#contact" }
+];
+
+// Theme colors (sesuai PRD)
+export const theme = {
+  colors: {
+    primary: "#5755ff",
+    background: "#F8F9FA",
+    text: "#212529",
+    textSecondary: "#6c757d"
+  }
+};
