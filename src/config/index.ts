@@ -120,7 +120,7 @@ export const siteContent: SiteContent = {
       image: "/projects/screenshots/website-uangsakti.png", // Menggunakan gambar yang ada
       technologies: ["Next.js", "TypeScript", "Supabase", "Tailwind CSS", "Chart.js"],
       liveUrl: "https://uangsakti.my.id",
-      sourceUrl: "https://github.com/sakti787/uangsakti",
+      sourceUrl: "https://github.com/sakti787/personal-finance",
       featured: true
     },
     {
@@ -128,8 +128,8 @@ export const siteContent: SiteContent = {
       title: "Zona Movie",
       description: "Platform streaming film dengan fitur subscription, playlist, dan history. Dilengkapi dengan payment gateway dan sistem manajemen konten yang komprehensif.",
       technologies: ["Laravel", "PHP", "MySQL", "Bootstrap", "Payment Gateway"],
-      liveUrl: "https://zonamovie.demo.com",
-      sourceUrl: "https://github.com/sakti-indra-heradewa/zona-movie",
+      liveUrl: "https://github.com/sakti787/Zona-Movie",
+      sourceUrl: "https://github.com/sakti787/Zona-Movie",
       featured: true
     },
     {
@@ -138,8 +138,8 @@ export const siteContent: SiteContent = {
       description: "Website portfolio personal yang dibangun dengan Next.js dan Tailwind CSS, menampilkan proyek dan pengalaman dengan desain yang clean dan responsif.",
       image: "/projects/screenshots/website-portfolio.png",
       technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
-      liveUrl: "https://sakti-portfolio.vercel.app",
-      sourceUrl: "https://github.com/sakti-indra-heradewa/portfolio",
+      liveUrl: "https://portofolio-sakti.vercel.app/",
+      sourceUrl: "https://github.com/sakti787/portofolio-sakti",
       featured: false
     },
   ]
