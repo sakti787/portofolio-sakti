@@ -41,25 +41,11 @@ export default function Navigation() {
   };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled 
-        ? 'bg-white/90 backdrop-blur-md shadow-lg' 
-        : 'bg-transparent'
-    }`}>
+  <nav className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white backdrop-blur-md shadow-lg">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex-shrink-0">
-            <a 
-              href="#home" 
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToSection('#home');
-              }}
-              className="text-2xl font-bold text-gray-900 hover:text-purple-600 transition-colors duration-300"
-            >
-            </a>
-          </div>
+          <div className="flex-shrink-0"></div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
@@ -88,7 +74,11 @@ export default function Navigation() {
           <div className="md:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-purple-600 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-purple-500"
+              className={`inline-flex items-center justify-center p-2 rounded-md hover:text-purple-600 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-purple-500 transition-colors duration-300 ${
+                isScrolled 
+                  ? 'text-gray-700 hover:bg-gray-50' 
+                  : 'text-white hover:bg-white/10'
+              }`}
               aria-expanded="false"
             >
               <span className="sr-only">Open main menu</span>

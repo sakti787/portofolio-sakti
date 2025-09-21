@@ -88,7 +88,7 @@ export default function HeroSection() {
 
           {/* Scroll indicator */}
           <ScrollAnimation animation="fade-in-up" delay={1000}>
-            <div className="pt-16">
+            <div className="pt-2">
               <a href="#experience" className="inline-flex flex-col items-center text-gray-500 hover:text-purple-600 transition-colors duration-300">
                 <span className="text-sm font-medium mb-2">Scroll to explore</span>
                 <svg className="w-6 h-6 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">

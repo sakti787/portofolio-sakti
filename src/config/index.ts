@@ -114,6 +114,16 @@ export const siteContent: SiteContent = {
   ],
   projects: [
     {
+      id: "airqu",
+      title: "Airqu",
+      description: "Aplikasi web untuk memantau kualitas udara secara real-time, menyediakan data polutan dan indeks kualitas udara (AQI) di berbagai lokasi.",
+      image: "/projects/screenshots/website-airqu.png", // Ganti dengan path screenshot Airqu Anda
+      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Leaflet.js"], // Sesuaikan teknologinya
+      liveUrl: "https://airqu-dmogcuihl-sakti-indra-heradewas-projects.vercel.app/", // Ganti dengan URL live Airqu
+      sourceUrl: "https://github.com/sakti787/AirQu", // Ganti dengan URL repository GitHub Airqu
+      featured: true
+    },
+    {
       id: "uangsakti",
       title: "UangSakti.my.id",
       description: "Aplikasi web manajemen keuangan personal yang memungkinkan pengguna untuk melacak income, expense, dan merencanakan budget dengan interface yang intuitif.",

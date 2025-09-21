@@ -9,12 +9,14 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       <Navigation />
+      <div style={{ marginTop: '60px' }}>
       <main>
         <HeroSection />
         <ExperienceSection />
         <ProjectsSection />
         <AboutSection />
       </main>
+      </div>
       <Footer />
     </div>
   );
