@@ -82,9 +82,10 @@ export default function ExperienceSection() {
           </h3>
           <div className="flex flex-wrap justify-center gap-4">
             {[
-              'Next.js', 'React', 'TypeScript', 'Laravel', 'PHP', 
-              'Supabase', 'MySQL', 'Tailwind CSS', 'Git', 'Docker',
-              'Nginx', 'Linux', 'Vercel', 'Chart.js', 'RESTful API'
+              'Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Shadcn UI', 'Framer Motion',
+              'Recharts', 'Zustand', 'Laravel', 'PHP', 'Supabase', 'PostgreSQL', 
+              'PL/pgSQL', 'MySQL', 'RESTful API', 'Proxmox VE', 'Linux Containers (LXC)', 
+              'Nginx', 'Cloudflare Tunnel', 'PM2', 'Vercel', 'Git', 'NVM'            
             ].map((tech) => (
               <span
                 key={tech}

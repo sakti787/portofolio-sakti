@@ -76,9 +76,22 @@ export const siteConfig: SiteConfig = {
 export const siteContent: SiteContent = {
   experiences: [
     {
+      id: "uangsakti 2.0",
+      position: "Full-Stack Developer (Independent Project)",
+      project: "UangSakti - Aplikasi Pelacak Keuangan Pribadi Berbasis Web",
+      duration: "Oktober 2025",
+    achievements: [
+      "Membangun aplikasi web full-stack dari nol dengan arsitektur Next.js App Router (Server & Client Components) untuk performa dan interaktivitas optimal.",
+      "Mengamankan data multi-pengguna dengan Supabase Auth dan menerapkan kebijakan Row Level Security (RLS) yang ketat di PostgreSQL.",
+      "Mendesain dan mengimplementasikan UI/UX modern (glassmorphism) yang responsif dengan Tailwind CSS, Shadcn UI, dan animasi kompleks menggunakan Framer Motion.",
+      "Melakukan deployment self-hosted pada Proxmox VE (via Linux Container) dan mengamankan akses publik menggunakan Cloudflare Tunnel (prinsip Zero Trust).",
+      "Meningkatkan performa secara drastis dengan memindahkan logika agregasi data yang kompleks ke server menggunakan Fungsi Database (RPC) PostgreSQL."
+    ]
+    },
+    {
       id: "uangsakti",
       position: "Full-Stack Developer",
-      project: "UangSakti.my.id - Aplikasi Manajemen Keuangan",
+      project: "UangSakti - Aplikasi Manajemen Keuangan",
       duration: "September 2025",
       achievements: [
         "Mengembangkan aplikasi web manajemen keuangan personal menggunakan Next.js dan Supabase",
@@ -114,12 +127,35 @@ export const siteContent: SiteContent = {
   ],
   projects: [
     {
+      id: "uangsakti 2.0",
+      title: "uangSakti.my.id",
+      description: "Aplikasi pelacak keuangan personal full-stack yang dirancang untuk audiens muda, menampilkan UI modern dengan animasi (glassmorphism), visualisasi data real-time, dan backend aman yang di-hosting secara mandiri (self-hosted) menggunakan virtualisasi container.",
+      image: "/projects/screenshots/website-uangsakti2.png",
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Shadcn UI",
+        "Framer Motion",
+        "Recharts",
+        "Zustand",
+        "Supabase",
+        "PostgreSQL",
+        "Proxmox VE",
+        "Cloudflare Tunnel",
+        "PM2"
+      ],
+      liveUrl: "https://uangsakti.my.id",
+      sourceUrl: "https://github.com/sakti787/personal-finance-2.0",
+      featured: true
+    },
+    {
       id: "airqu",
       title: "Airqu",
       description: "Aplikasi web untuk memantau kualitas udara secara real-time, menyediakan data polutan dan indeks kualitas udara (AQI) di berbagai lokasi.",
       image: "/projects/screenshots/website-airqu.png", // Ganti dengan path screenshot Airqu Anda
       technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Leaflet.js"], // Sesuaikan teknologinya
-      liveUrl: "https://airqu-dmogcuihl-sakti-indra-heradewas-projects.vercel.app/", // Ganti dengan URL live Airqu
+      liveUrl: "https://airqu.vercel.app/", // Ganti dengan URL live Airqu
       sourceUrl: "https://github.com/sakti787/AirQu", // Ganti dengan URL repository GitHub Airqu
       featured: true
     },
@@ -129,7 +165,7 @@ export const siteContent: SiteContent = {
       description: "Aplikasi web manajemen keuangan personal yang memungkinkan pengguna untuk melacak income, expense, dan merencanakan budget dengan interface yang intuitif.",
       image: "/projects/screenshots/website-uangsakti.png", // Menggunakan gambar yang ada
       technologies: ["Next.js", "TypeScript", "Supabase", "Tailwind CSS", "Chart.js"],
-      liveUrl: "https://uangsakti.my.id",
+      liveUrl: "https://finance-sakti.vercel.app/",
       sourceUrl: "https://github.com/sakti787/personal-finance",
       featured: true
     },
