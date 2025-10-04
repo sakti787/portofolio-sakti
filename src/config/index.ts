@@ -128,7 +128,7 @@ export const siteContent: SiteContent = {
   projects: [
     {
       id: "uangsakti 2.0",
-      title: "uangSakti.my.id",
+      title: "uangsakti 2.0",
       description: "Aplikasi pelacak keuangan personal full-stack yang dirancang untuk audiens muda, menampilkan UI modern dengan animasi (glassmorphism), visualisasi data real-time, dan backend aman yang di-hosting secara mandiri (self-hosted) menggunakan virtualisasi container.",
       image: "/projects/screenshots/website-uangsakti2.png",
       technologies: [
@@ -161,7 +161,7 @@ export const siteContent: SiteContent = {
     },
     {
       id: "uangsakti",
-      title: "UangSakti.my.id",
+      title: "uangsakti",
       description: "Aplikasi web manajemen keuangan personal yang memungkinkan pengguna untuk melacak income, expense, dan merencanakan budget dengan interface yang intuitif.",
       image: "/projects/screenshots/website-uangsakti.png", // Menggunakan gambar yang ada
       technologies: ["Next.js", "TypeScript", "Supabase", "Tailwind CSS", "Chart.js"],
