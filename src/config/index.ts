@@ -75,6 +75,7 @@ export const siteConfig: SiteConfig = {
 // Site content
 export const siteContent: SiteContent = {
   experiences: [
+
     {
       id: "helpdesk-realtime",
       position: "Full-Stack Developer (Independent Project)",
@@ -139,6 +140,16 @@ export const siteContent: SiteContent = {
     },
   ],
   projects: [
+    {
+      id: "muchu-petshop",
+      title: "Muchu PetShop",
+      description: "Website statis bertema calm & pet-friendly untuk Muchu PetShop di Wonosobo. Menampilkan profil toko, jam operasional, kategori produk, testimoni pelanggan, serta lokasi presisi dengan Google Maps embed dan tombol cepat WhatsApp/Telepon/Instagram.",
+      image: "/projects/screenshots/website-petshop.png", // Ganti dengan path screenshot Muchu PetShop Anda
+      technologies: ["Node.js", "Vite", "HTML", "CSS", "JavaScript"], // Sesuaikan jika Anda pakai framework lain
+      liveUrl: "https://pet-shop-static.vercel.app/", // Ganti dengan URL live Anda
+      sourceUrl: "https://github.com/sakti787/pet-shop-static", // Ganti dengan URL repository GitHub Anda
+      featured: true
+    },
     {
       id: "helpdesk-realtime",
       title: "Helpdesk Realtime (Ticketing + Chat)",
