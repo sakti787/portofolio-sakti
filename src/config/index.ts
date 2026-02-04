@@ -76,17 +76,30 @@ export const siteConfig: SiteConfig = {
 export const siteContent: SiteContent = {
   experiences: [
     {
+      id: "helpdesk-realtime",
+      position: "Full-Stack Developer (Independent Project)",
+      project: "Helpdesk Realtime - Sistem Ticketing & Live Chat Berbasis Web",
+      duration: "Februari 2026",
+      achievements: [
+        "Membangun aplikasi helpdesk full-stack dari nol menggunakan Laravel + Inertia.js + Vue 3 untuk menghasilkan pengalaman SPA yang cepat namun tetap server-driven dan mudah dikelola.",
+        "Mengimplementasikan role-based access control (Admin/Agent/Customer) menggunakan middleware dan policy untuk memastikan setiap pengguna hanya dapat mengakses data serta fitur sesuai perannya.",
+        "Mendesain dan mengembangkan modul ticketing end-to-end (create, assign/claim, status flow, resolve/close) lengkap dengan audit trail (ticket events) untuk kebutuhan tracking aktivitas.",
+        "Mengintegrasikan realtime chat per-ticket menggunakan WebSocket/Broadcasting sehingga pesan dan update status dapat muncul tanpa refresh, meningkatkan responsivitas agent dan pengalaman pengguna.",
+        "Membangun dashboard Agent Queue dengan filter status (unassigned/assigned) serta pencarian, dan menyusun struktur API endpoint yang rapi untuk integrasi atau pengembangan lanjutan."
+      ]
+    },
+    {
       id: "uangsakti 2.0",
       position: "Full-Stack Developer (Independent Project)",
       project: "UangSakti - Aplikasi Pelacak Keuangan Pribadi Berbasis Web",
       duration: "Oktober 2025",
-    achievements: [
-      "Membangun aplikasi web full-stack dari nol dengan arsitektur Next.js App Router (Server & Client Components) untuk performa dan interaktivitas optimal.",
-      "Mengamankan data multi-pengguna dengan Supabase Auth dan menerapkan kebijakan Row Level Security (RLS) yang ketat di PostgreSQL.",
-      "Mendesain dan mengimplementasikan UI/UX modern (glassmorphism) yang responsif dengan Tailwind CSS, Shadcn UI, dan animasi kompleks menggunakan Framer Motion.",
-      "Melakukan deployment self-hosted pada Proxmox VE (via Linux Container) dan mengamankan akses publik menggunakan Cloudflare Tunnel (prinsip Zero Trust).",
-      "Meningkatkan performa secara drastis dengan memindahkan logika agregasi data yang kompleks ke server menggunakan Fungsi Database (RPC) PostgreSQL."
-    ]
+      achievements: [
+        "Membangun aplikasi web full-stack dari nol dengan arsitektur Next.js App Router (Server & Client Components) untuk performa dan interaktivitas optimal.",
+        "Mengamankan data multi-pengguna dengan Supabase Auth dan menerapkan kebijakan Row Level Security (RLS) yang ketat di PostgreSQL.",
+        "Mendesain dan mengimplementasikan UI/UX modern (glassmorphism) yang responsif dengan Tailwind CSS, Shadcn UI, dan animasi kompleks menggunakan Framer Motion.",
+        "Melakukan deployment self-hosted pada Proxmox VE (via Linux Container) dan mengamankan akses publik menggunakan Cloudflare Tunnel (prinsip Zero Trust).",
+        "Meningkatkan performa secara drastis dengan memindahkan logika agregasi data yang kompleks ke server menggunakan Fungsi Database (RPC) PostgreSQL."
+      ]
     },
     {
       id: "uangsakti",
@@ -97,20 +110,20 @@ export const siteContent: SiteContent = {
         "Mengembangkan aplikasi web manajemen keuangan personal menggunakan Next.js dan Supabase",
         "Mengimplementasikan fitur tracking income dan expense",
         "Mendesain dan membangun RESTful API untuk operasi CRUD data keuangan",
-        "Menerapkan authentication dan authorization menggunakan Supabase Auth",      ]
+        "Menerapkan authentication dan authorization menggunakan Supabase Auth",]
     },
     {
-    id: "infra",
-    position: "Infrastruktur & Deployment",
-    project: "Self-Hosting Aplikasi Web (uangsakti.my.id)",
-    duration: "September 2025",
-    achievements: [
+      id: "infra",
+      position: "Infrastruktur & Deployment",
+      project: "Self-Hosting Aplikasi Web (uangsakti.my.id)",
+      duration: "September 2025",
+      achievements: [
         "Melakukan setup dan konfigurasi server Ubuntu dari nol di lingkungan non-cloud untuk production deployment.",
         "Mengkonfigurasi Nginx sebagai reverse proxy untuk mengarahkan traffic ke aplikasi Next.js yang berjalan dengan process manager PM2.",
         "Mengamankan dan mempublikasikan aplikasi web dari server lokal (non-cloud) menggunakan Cloudflare Tunnel, secara efektif menyembunyikan alamat IP asli server dan melindunginya dari serangan langsung.",
         "Membuat deployment script sederhana (Bash) untuk otomatisasi proses pull dari Git dan restart service aplikasi.",
         "Menerapkan monitoring dasar pada server untuk memantau penggunaan CPU dan memori secara real-time."
-    ]
+      ]
     },
     {
       id: "zonamovie",
@@ -126,6 +139,16 @@ export const siteContent: SiteContent = {
     },
   ],
   projects: [
+    {
+      id: "helpdesk-realtime",
+      title: "Helpdesk Realtime (Ticketing + Chat)",
+      description:
+        "Platform helpdesk fullstack dengan alur kerja tiket dan obrolan waktu nyata untuk mengelola dukungan pelanggan. Termasuk akses berbasis peran (Admin/Agen/Pelanggan), antrian agen, alur status tiket, dan pengiriman pesan berbasis WebSocket.",
+      image: "/projects/screenshots/website-helpdesk.png", // Opsional: taruh screenshot di public/projects/screenshots/
+      technologies: ["Laravel", "PHP", "Inertia.js", "Vue 3", "Naive UI", "MySQL", "WebSockets", "REST API"],
+      sourceUrl: "https://github.com/sakti787/helpdesk-realtime-laravel",
+      featured: true
+    },
     {
       id: "uangsakti 2.0",
       title: "uangsakti 2.0",
